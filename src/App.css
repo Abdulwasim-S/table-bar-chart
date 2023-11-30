@@ -11,9 +11,7 @@
 }
 .dashboard{
     padding: 50px;
-}
-.bg-lightdark{
-    background-color: rgb(150,150,150);
+    background-color: lightgray;
 }
 .filter-box{
     margin-bottom: 0.5%;
@@ -21,11 +19,13 @@
 .bar-chart-box{
     padding: 50px;
     width: 100%;
+    background-color: lightgray;
 }
 .bar-chart{
     background-color: white;
     max-height: 50vh;
     width: 100%;
+    padding: 10px;
 }
 .statistics-box{
     padding: 50px;

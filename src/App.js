@@ -5,11 +5,13 @@ import axios from "axios";
 import Tablepage from "./component/Tablepage";
 import BarChartPage from "./component/BarChartPage";
 import Statistics from "./component/Statistics";
+import PieChartPage from "./component/PieChartPage";
 
 function App() {
   const [data, setData] = useState();
   const [statisticData, setStatisticData] = useState();
   const [chartData, setChartData] = useState();
+  const [categoriesData, setCategoriesData] = useState();
   const [monthName, setMonthName] = useState("March");
   const getData = async (month) => {
     try {
@@ -20,6 +22,7 @@ function App() {
           setChartData(res.data.barchart_items);
           setData(res.data.items);
           setStatisticData(res.data.statisticData);
+          setCategoriesData(res.data.categories);
         })
         .catch((error) => {
           console.log(error);
@@ -41,6 +44,7 @@ function App() {
       <Tablepage data={data} updateMonth={updateMonth} />
       <Statistics statisticData={statisticData} monthName={monthName} />
       <BarChartPage chartData={chartData} monthName={monthName} />
+      <PieChartPage categoriesData={categoriesData} />
       <p className="footer-page">
         <i>@Copyrights reserved</i>
       </p>
