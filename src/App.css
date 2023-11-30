@@ -23,6 +23,7 @@
 }
 .bar-chart{
     background-color: white;
+    min-height: 50vh;
     max-height: 50vh;
     width: 100%;
     padding: 10px;
